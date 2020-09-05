@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
-import sys
 if __name__ == "__main__":
-    av = sys.argv
+    from calculator_1 import add, sub, mul, div
+    from sys import argv
+    av = argv
     if len(av) - 1 != 3:
         print("Usage: {} <a> <operator> <b>".format(av[0]))
         exit(1)
