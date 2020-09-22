@@ -3,4 +3,5 @@ class Square:
     """Squeare function mathmatical.
     Attributes:
     """
+
     pass
