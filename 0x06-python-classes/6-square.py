@@ -25,7 +25,7 @@ class Square:
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         if type(value[0]) is not int:
@@ -40,7 +40,7 @@ class Square:
     def my_print(self):
         for i in range(self.__position[1]):
             print()
-        
+
         for j in range(self.__size):
             for y in range(self.__position[0]):
                 print(" ", end="")
