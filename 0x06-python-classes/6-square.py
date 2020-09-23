@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Class square - computer area.
+"""
+
+
 class Square:
     """Method to proof privatly an attribute
     """
