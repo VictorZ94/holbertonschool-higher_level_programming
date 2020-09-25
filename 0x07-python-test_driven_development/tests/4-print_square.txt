@@ -1,0 +1,47 @@
+Module print_square
+======================
+
+Using print_square:
+print square size x size.
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Checking docstring for module:
+        >>> __import__('4-print_square').__doc__ != None
+        True
+
+Check docstring for function:
+        >>> len(print_square.__doc__) > 0
+        True
+
+checking normal integer:
+    >>> print_square(2)
+    ##
+    ##
+
+checking when user pass decimal number and is negative:
+    >>> print_square(-2.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+checkin only numbers:
+    >>> print_square(-15)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+checking when user pass string:
+    >>> print_square('Hello')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+checking when user pass argument 0:
+    >>> print_square(0)
+
+checking when user pass argument None:
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
