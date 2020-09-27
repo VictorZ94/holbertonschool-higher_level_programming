@@ -39,3 +39,7 @@ checking type:
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
+
+checking missing two arguments:
+    >>> say_my_name("")
+    My name is    
