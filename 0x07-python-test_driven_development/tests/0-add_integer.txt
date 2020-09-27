@@ -48,7 +48,7 @@ checking number infinity:
     ...
     OverflowError: cannot convert float infinity to integer
 checking nan No a Number:
-    >>> add_integer(float('nan'), -2)
+    >>> add_integer(float('NaN'), -2)
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
