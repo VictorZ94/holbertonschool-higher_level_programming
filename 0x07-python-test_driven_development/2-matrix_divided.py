@@ -25,11 +25,11 @@ def matrix_divided(matrix, div):
     for y in matrix:
         if type(matrix) is not list or type(matrix[j]) is not list:
             raise TypeError("matrix must be a matrix (list of lists) \
-                of integers/floats")
+of integers/floats")
         for x in matrix[j]:
             if type(x) is not int and type(x) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) \
-                                of integers/floats")
+of integers/floats")
         j += 1
 
     size = len(matrix[0])
