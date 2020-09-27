@@ -41,3 +41,9 @@ Should return add new number:
 Should return add new number:
     >>> add_integer(-5, )
     93
+
+checking number infinity:
+    >>> add_integer(float('inf'), -2)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
