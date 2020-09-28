@@ -6,15 +6,18 @@
 class Rectangle:
     """ Doc """
     def __init__(self, width=0, height=0):
+        """Initialize contructor"""
         self.__height = height
         self.__width = width
 
     @property
-    def width(self):  # getter
+    def width(self):
+        """ Return width """
         return self.__width
 
     @width.setter
-    def width(self, value):  # setter
+    def width(self, value):
+        """ set width """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -23,10 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """ Return height """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ set height """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
