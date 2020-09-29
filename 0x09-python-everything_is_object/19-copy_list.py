@@ -1,9 +1,3 @@
-#!/usr/bin/usr
-"""Doc
-"""
-
-
+#!/usr/bin/python3
 def copy_list(l):
-    """Doc
-    """
     return l[:]
