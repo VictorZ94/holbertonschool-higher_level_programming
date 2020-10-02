@@ -4,24 +4,17 @@
 
 
 def text_indentation(text):
-    """[summary]
-
-    Args:
-        text ([type]): [description]
-
-    Raises:
-        TypeError: [description]
-    """
+    """ Doc """
     if type(text) is not str:
         raise TypeError("text must be a string")
+    length = len(text)
+    string = ""
     i = 0
-    for i in range(len(text)):
-        if text[i] == ' ' and text[i-1] == '?' or text[i-1] \
-                == '.' or text[i-1] == ':':
-            None
-        else:
-            print("{}".format(text[i]), end="")
+    while i < length:
+        string += text[i]
         if text[i] == ':' or text[i] == '?' or text[i] == '.':
+            print("{:s}".format(string.strip()), end="")
+            string = ""
             print("\n")
         i += 1
-    print("")
+    print("{:s}".format(string.strip()))
