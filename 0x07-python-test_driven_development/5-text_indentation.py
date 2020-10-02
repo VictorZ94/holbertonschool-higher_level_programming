@@ -4,7 +4,8 @@
 
 
 def text_indentation(text):
-    """ Doc """
+    """ Doc 
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
     length = len(text)
@@ -13,8 +14,7 @@ def text_indentation(text):
     while i < length:
         string += text[i]
         if text[i] == ':' or text[i] == '?' or text[i] == '.':
-            print("{:s}".format(string.strip()), end="")
+            print("{:s}".format(string.strip()))
             string = ""
-            print("\n")
         i += 1
     print("{:s}".format(string.strip()))
