@@ -18,4 +18,3 @@ def text_indentation(text):
             print("\n")
         i += 1
     print("{:s}".format(string.strip()))
-    
