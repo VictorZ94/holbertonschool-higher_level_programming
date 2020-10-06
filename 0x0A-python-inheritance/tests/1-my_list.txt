@@ -1,0 +1,43 @@
+Module my_list
+======================
+
+Using my list:
+inherited class's list.
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+
+Checking docstring for module:
+        >>> __import__('1-my_list').__doc__ != None
+        True
+
+Check docstring for Class:
+        >>> __import__("1-my_list").MyList.__doc__ != None
+        True
+
+Check docstring for function:
+        >>> __import__("1-my_list").MyList.print_sorted.__doc__ != None
+        True
+
+Check docstring for all functions:
+        >>> __import__("1-my_list").MyList.print_sorted.__doc__ != None
+        True
+
+checking list empty:
+    >>> my_list.print_sorted()
+    []
+
+checking when user pass arguments:
+    >>> my_list.append(10)
+    >>> my_list.append(20)
+    >>> my_list.print_sorted()
+    [10, 20]
+
+checkin only numbers:
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5, 10, 20]
