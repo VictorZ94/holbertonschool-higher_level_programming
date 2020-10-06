@@ -6,5 +6,6 @@
 def is_same_class(obj, a_class):
     """Doc"""
     if type(obj) == a_class:
-        """Doc"""
         return True
+    else:
+        return False
