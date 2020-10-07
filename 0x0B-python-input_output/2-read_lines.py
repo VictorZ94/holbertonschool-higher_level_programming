@@ -9,12 +9,14 @@ def read_lines(filename="", nb_lines=0):
         filename (str, pathname): [path of file]. Defaults to "".
         nb_lines (int, numberlines): [indicate numbers lines to print].
     """
-    with open(filename, encoding="utf-8") as myFile:
+    with open(filename, encoding="UTF-8") as myFile:
         check = 0
+        if nb_lines <= 0:
+            print(myFile.read())
         while True:
             line = myFile.readline()
             if not line:
                 break
-            if check < nb_lines or nb_lines == 0:
+            if check < nb_lines:
                 print(line[:-1])
             check += 1
