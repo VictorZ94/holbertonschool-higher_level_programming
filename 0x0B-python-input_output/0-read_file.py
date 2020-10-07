@@ -9,5 +9,4 @@ def read_file(filename=""):
         filename (pathname, format or mode) Defaults to "".
     """
     with open(filename, encoding="UTF-8") as myFile:
-        text = myFile.read()
-        print("{}".format(text))
+        print(myFile.read(), end="")
