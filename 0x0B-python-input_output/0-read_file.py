@@ -8,5 +8,5 @@ def read_file(filename=""):
     Args:
         filename (pathname, format or mode) Defaults to "".
     """
-    with open(filename, mode="rt", encoding="utf-8") as myFile:
+    with open(filename, mode="rt", encoding="UTF8") as myFile:
         print(myFile.read())
