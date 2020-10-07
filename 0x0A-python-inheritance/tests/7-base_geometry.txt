@@ -1,0 +1,37 @@
+Module my_list
+======================
+
+Using my list:
+inherited class's list.
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking docstring for module:
+        >>> __import__('7-base_geometry').__doc__ != None
+        True
+
+Check docstring for function:
+        >>> __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__ != None
+        True
+
+Check docstring for all functions:
+        >>> __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__ != None
+        True
+
+checking normal value:
+    >>> BaseGeometry.integer_validator("Victor", 25)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+checking list empty:
+    >>> BaseGeometry.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+Checking None
+    >>> BaseGeometry.integer_validator(None, 25)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
