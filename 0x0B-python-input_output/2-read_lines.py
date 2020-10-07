@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+"""Function to print lines given
+"""
+
+
+def read_lines(filename="", nb_lines=0):
+    """
+    Args:
+        filename (str, pathname): [path of file]. Defaults to "".
+        nb_lines (int, numberlines): [indicate numbers lines to print]. Defaults to 0.
+    """
+    with open(filename, encoding="utf-8") as myFile:
+        check = 0
+        while True:
+            line = myFile.readline()
+            if check < nb_lines:
+                print(line[:-1])
+            if nb_lines == 0:
+                print(line, end="")
+            if not line:
+                break
+            check += 1
+        if nb_lines == 0:
+            print()
