@@ -11,12 +11,10 @@ def read_lines(filename="", nb_lines=0):
     """
     with open(filename, encoding="UTF-8") as myFile:
         check = 0
-        if nb_lines <= 0:
-            print(myFile.read())
         while True:
             line = myFile.readline()
             if not line:
                 break
-            if check < nb_lines:
+            if check < nb_lines or nb_lines <= 0:
                 print(line[:-1])
             check += 1
