@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """To change JSON to string
 """
+import json
 
 
 def to_json_string(my_obj):
-    import json
     """
     Args:
         my_obj ([type]): [description]
