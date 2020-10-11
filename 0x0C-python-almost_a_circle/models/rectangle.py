@@ -11,8 +11,8 @@ class Rectangle(Base):
         Args:
             width (int): [indicate width of the Rectangle]
             height ([int]): [indicate height of the Rectangle]
-            x (int, position): [(horizontal) direction is called X]. Defaults to 0.
-            y (int, position): [(vertical) direction is called Y]. Defaults to 0.
+            x (position): [(horizontal) direction is called X]. Defaults to 0.
+            y (position): [(vertical) direction is called Y]. Defaults to 0.
             id ([type], optional): [description]. Defaults to None.
         """
         super().__init__(id)
@@ -70,6 +70,21 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Calculate area: b*h
+        Returns:
+            [int]: [area calculate width * height]
+        """
         return self.__width * self.__height
-    
-    
+
+    def display(self):
+        """print square stdout with symbol # """
+        for y in range(self.__height):
+            for x in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """overwriting method __str__ """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+             self.id, self.__x, self.__y, self.__width, self.__height)
+
