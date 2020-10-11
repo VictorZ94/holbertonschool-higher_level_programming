@@ -79,6 +79,8 @@ class Rectangle(Base):
     def display(self):
         """print square stdout with symbol # """
         for y in range(self.__height):
+            for r in range(self.__x):
+                print(" ", end="")
             for x in range(self.__width):
                 print("#", end="")
             print()
@@ -88,3 +90,4 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
              self.id, self.__x, self.__y, self.__width, self.__height)
 
+    
