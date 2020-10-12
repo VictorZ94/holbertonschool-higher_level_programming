@@ -90,4 +90,14 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
              self.id, self.__x, self.__y, self.__width, self.__height)
 
-    
+    def update(self, *args, **kwargs):
+        if len(args) != 0:
+            names = ("id", "width", "height", "x", "y")
+            leght = len(args)
+            for arg in range(leght):
+                setattr(self, names[arg], args[arg])
+                if arg > leght:
+                    break
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
