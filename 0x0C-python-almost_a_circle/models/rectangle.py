@@ -99,8 +99,12 @@ class Rectangle(Base):
             leght = len(args)
             for arg in range(leght):
                 setattr(self, names[arg], args[arg])
-                if arg > leght:
-                    break
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        dictionary = {"x": self.x, "y": self.y, "id": self.id,
+                      "height": self.height, "width": self.width}
+        return dictionary
