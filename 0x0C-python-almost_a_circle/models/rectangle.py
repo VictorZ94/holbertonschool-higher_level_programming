@@ -78,6 +78,8 @@ class Rectangle(Base):
 
     def display(self):
         """print square stdout with symbol # """
+        for skipline in range(self.__y):
+            print()
         for y in range(self.__height):
             for r in range(self.__x):
                 print(" ", end="")
