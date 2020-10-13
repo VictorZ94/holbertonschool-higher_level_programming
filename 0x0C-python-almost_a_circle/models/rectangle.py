@@ -9,14 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """Method main __init__ """
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Args:
-            width (int): [indicate width of the Rectangle]
-            height ([int]): [indicate height of the Rectangle]
-            x (position): [(horizontal) direction is called X]. Defaults to 0.
-            y (position): [(vertical) direction is called Y]. Defaults to 0.
-            id ([type], optional): [description]. Defaults to None.
-        """
+        """Doc """
         super().__init__(id)
         self.width = width
         self.height = height
