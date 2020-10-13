@@ -25,14 +25,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ Getter for size """
         return self.width
 
     @size.setter
     def size(self, value):
+        """ Setter for size """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ function updated  """
         if len(args) != 0:
             nameattr = ("id", "size", "x", "y")
             for iter in range(len(args)):
@@ -43,5 +46,6 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ return a dictionary """
         dictionary = {"id": self.id, "x": self.x, "size": self.size, "y": 1}
         return dictionary
