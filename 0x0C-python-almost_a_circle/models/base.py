@@ -36,3 +36,22 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary): # {'x': 1, 'y': 0, 'id': 1, 'height': 5, 'width': 3}
+        dummy = cls(1, 3)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        Newlist = []
+        try:
+           with open("{}.json".format(cls.__name__), mode="rt") as f:
+               listtemp = cls.from_json_string(f.read())
+        except:
+            listtemp = []
+
+        for iter in listtemp:
+            Newlist.append(cls.create(**iter))
+        return Newlist
