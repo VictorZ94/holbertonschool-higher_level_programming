@@ -7,7 +7,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Method main __init__ """
+    """ Method main init """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Doc """
         super().__init__(id)
