@@ -48,13 +48,13 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        Newlist = []
         try:
             with open("{}.json".format(cls.__name__), mode="rt") as f:
                 listtemp = cls.from_json_string(f.read())
         except:
             listtemp = []
 
+        Newlist = []
         for iter in listtemp:
             Newlist.append(cls.create(**iter))
         return Newlist
