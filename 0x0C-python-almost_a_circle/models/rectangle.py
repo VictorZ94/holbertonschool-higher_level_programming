@@ -18,12 +18,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Doc"""
+        """Getter for width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Doc"""
+        """Setter for width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -32,12 +32,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Doc"""
+        """Setter for width"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Doc"""
+        """Setter for width"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -46,12 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Doc"""
+        """Setter for width"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """Doc"""
+        """Setter for width"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -60,12 +60,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Doc"""
+        """Setter for width"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Doc"""
+        """Setter for width"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -97,7 +97,7 @@ class Rectangle(Base):
              self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """Doc"""
+        """Function update """
         if len(args) != 0:
             names = ("id", "width", "height", "x", "y")
             leght = len(args)
@@ -109,7 +109,7 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """Doc"""
+        """return dictionary"""
         dictionary = {"x": self.x, "y": self.y, "id": self.id,
                       "height": self.height, "width": self.width}
         return dictionary
