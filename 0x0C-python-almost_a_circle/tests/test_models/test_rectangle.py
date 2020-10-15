@@ -51,6 +51,9 @@ class Testrectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 2, {})
         self.assertRaises(TypeError, Rectangle, "", "2")
         self.assertRaises(TypeError, Rectangle, (2, 4))
+        self.assertRaises(TypeError, Rectangle, "10", 2)
+        self.assertRaises(TypeError, Rectangle, 1, 2, "3")
+        self.assertRaises(TypeError, Rectangle, 1, 2, "4")
         "None arguments"
         self.assertRaises(TypeError, Rectangle)
         """Float arguments """
@@ -71,10 +74,41 @@ class Testrectangle(unittest.TestCase):
             r = Rectangle(10, 2)
             r.width = -10
 
+    def test_raise_error_value2(self):
+        """ Raise error value"""
+        self.assertRaises(ValueError, Rectangle, -1, 2)
+        self.assertRaises(ValueError, Rectangle, 0, 2)
+        self.assertRaises(ValueError, Rectangle, 1, 0)
+        self.assertRaises(ValueError, Rectangle, 1, 2, -3)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
+
     """Task 4"""
     def test_area(self):
         r1 = Rectangle(3, 2)
         self.assertEqual(r1.area(), 6)
+
+    """Task 5 """
+    def test_display(self):
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.display(), None)
+
+    def test_display1(self):
+        r2 = Rectangle(3, 2, 4)
+        self.assertEqual(r2.display(), None)
+
+    def test_display2(self):
+        r2 = Rectangle(3, 2, 4, 5)
+        self.assertEqual(r2.display(), None)
+
+    """task 4 """
+    # def test_str(self):
+    #     r1 = Rectangle(3, 2, 4, 5, 6)
+    #     self.assertEqual(r1, None)
+
+    # def test_update(self):
+    #     r1 = Rectangle(89, 1)
+    #     self.assertEqual(r1.update, None)
+    
 
 
 if __name__ == '__main__':

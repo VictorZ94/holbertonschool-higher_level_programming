@@ -29,6 +29,10 @@ class Testbase(unittest.TestCase):
         b3 = Base()
         self.assertEqual(b3.id, 3)
 
+    # """Edge test or Corner test """
+    # def test_edge_test(self):
+    #     b5 = Base.to_json_string()
+        
 
 if __name__ == '__main__':
     unittest.main()
