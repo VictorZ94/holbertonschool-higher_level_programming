@@ -9,6 +9,10 @@ import unittest
 class Testbase(unittest.TestCase):
     """Test base class"""
 
+    def test_json_string_doc(self):
+        """Test documentation"""
+        self.assertTrue(len(to_json_string.__doc__) > 0)
+
     def test_assert_equal1(self):
         """Normal arguments """
         b1 = Base()
