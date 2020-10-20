@@ -3,6 +3,7 @@
 """
 from models.base import Base
 import unittest
+to_json_string = Base.to_json_string
 # import inspect
 
 
