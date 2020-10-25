@@ -36,6 +36,7 @@ class Testsquare(unittest.TestCase):
         self.assertRaises(ValueError, Square, 0)
 
     def test_documentation(self):
+        """ Test documentation """
         self.assertTrue(len(square.__doc__) > 0)
         self.assertTrue(len(Square.__doc__) > 0)
         self.assertTrue(len(update.__doc__) > 0)
