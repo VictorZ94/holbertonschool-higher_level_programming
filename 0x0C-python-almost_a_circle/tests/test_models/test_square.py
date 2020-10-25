@@ -4,11 +4,6 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
-from models.square import Square
-
-import unittest
-from models.base import Base
-from models.rectangle import Rectangle
 from models import square
 from models.square import Square
 from io import StringIO
@@ -16,6 +11,7 @@ import sys
 Square = Square
 update = Square.update
 to_dictionary = Square.to_dictionary
+
 
 class Testsquare(unittest.TestCase):
     def test_arguments(self):
@@ -38,7 +34,7 @@ class Testsquare(unittest.TestCase):
         self.assertRaises(ValueError, Square, 1, -4)
         self.assertRaises(ValueError, Square, 1, 2, -3)
         self.assertRaises(ValueError, Square, 0)
-    
+
 # ********************** Section to test other *******************
     def test_documentation(self):
         self.assertTrue(len(square.__doc__) > 0)
@@ -289,9 +285,8 @@ class Testsquare(unittest.TestCase):
         Base._Base__nb_objects = 0
 
         self.assertRaises(ValueError, Square, 2, 2, -5)
-    
 
 # ************* end other test ****************************
-    
+
 if __name__ == '__main__':
     unittest.main()
