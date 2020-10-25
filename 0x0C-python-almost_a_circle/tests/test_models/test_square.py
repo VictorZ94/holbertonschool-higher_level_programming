@@ -35,7 +35,6 @@ class Testsquare(unittest.TestCase):
         self.assertRaises(ValueError, Square, 1, 2, -3)
         self.assertRaises(ValueError, Square, 0)
 
-# ********************** Section to test other *******************
     def test_documentation(self):
         self.assertTrue(len(square.__doc__) > 0)
         self.assertTrue(len(Square.__doc__) > 0)
@@ -285,8 +284,6 @@ class Testsquare(unittest.TestCase):
         Base._Base__nb_objects = 0
 
         self.assertRaises(ValueError, Square, 2, 2, -5)
-
-# ************* end other test ****************************
 
 if __name__ == '__main__':
     unittest.main()
