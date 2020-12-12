@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-""" Select all database states 
-"""
-
-
 if __name__ == "__main__":
-    """ Select all database states 
+    """ Select all database states
     """
     import sys
     import MySQLdb
