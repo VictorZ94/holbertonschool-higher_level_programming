@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Filter only state input by command line
+"""
 if __name__ == "__main__":
     import sys
     import MySQLdb
