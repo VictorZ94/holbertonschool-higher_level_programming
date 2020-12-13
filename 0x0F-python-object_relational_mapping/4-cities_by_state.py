@@ -10,8 +10,8 @@ if __name__ == "__main__":
     cursor = conn.cursor()
     cursor.execute("SELECT c.id, c.name, s.name\
                     FROM cities AS c\
-                    JOIN states AS s \
-                    ON c.state_id=s.id ORDER BY s.id;")
+                    JOIN states AS s\
+                    ON c.state_id=s.id ORDER BY c.id;")
     query_rows = cursor.fetchall()
     for row in query_rows:
         print("{}".format(row))
