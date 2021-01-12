@@ -6,7 +6,7 @@ import sys
 
 
 if __name__ == "__main__":
-    url = ' http://986b2095742f.7b77981b.hbtn-cod.io:5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
     query = ""
     if len(sys.argv) > 1:
         query = sys.argv[1]
