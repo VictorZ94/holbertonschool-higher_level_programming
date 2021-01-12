@@ -6,21 +6,20 @@ import sys
 
 
 if __name__ == "__main__":
-    url = 'http://0.0.0.0:5000/search_user'
+    url = ' http://986b2095742f.7b77981b.hbtn-cod.io:5000/search_user'
     query = ""
-    try:
+    if len(sys.argv) > 1:
         query = sys.argv[1]
-    except:
-        pass
 
-    response = requests.post(url, data={'q': query})
+    letter = {'q': query}
+    response = requests.post(url, data=letter)
     json_response = response.json()
     try:
-        if bool(json_response) is False:
-            print("{}".format("No result"))
-        else:
+        if json_response:
             dict1 = json_response.values()
             dict1 = list(dict1)
             print("[{}] {}".format(dict1[0], dict1[1]))
+        else:
+            print("{}".format("No result"))
     except:
-        print("{}".format("Not a valid JSON"))
+        print("Not a valid JSON")
