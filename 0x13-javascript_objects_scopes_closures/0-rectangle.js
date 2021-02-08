@@ -1,4 +1,3 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
-  constructor () {}
-};
+// Working on Class in JS
+module.exports = class Rectangle {};
