@@ -1,10 +1,5 @@
-// $(function()
-// {
-//   $('header').css("color", "#FF0000");
-// });
-
-$(document).ready(function() {
-   $('header').css('color', '#FF0000');
+$(document).ready(function () {
+  $('header').css('color', '#FF0000');
 });
 
 // All three of the following syntaxes are equivalent:
