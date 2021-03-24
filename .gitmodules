@@ -1,0 +1,12 @@
+[submodule "AirBnB_clone"]
+	path = AirBnB_clone
+	url = https://github.com/VictorZ94/AirBnB_clone.git
+[submodule "AirBnB_clone_v2"]
+	path = AirBnB_clone_v2
+	url = https://github.com/VictorZ94/AirBnB_clone_v2.git
+[submodule "AirBnB_clone_v3"]
+	path = AirBnB_clone_v3
+	url = https://github.com/VictorZ94/AirBnB_clone_v3.git
+[submodule "AirBnB_clone_v4"]
+	path = AirBnB_clone_v4
+	url = https://github.com/jossvega/AirBnB_clone_v4.git
